@@ -165,6 +165,10 @@ a:hover {
   color: var(--text);
 }
 
+.nav a.active {
+  color: var(--accent);
+}
+
 .section {
   background: var(--panel);
   border: 1px solid var(--line);
