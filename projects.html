@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>李默 | 科研项目</title>
+  <title>李默 | 科研项目与获奖</title>
+  <meta name="description" content="李默科研项目与获奖" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -14,12 +15,74 @@
           <button id="btn-zh" class="lang-btn active">中文</button>
           <button id="btn-en" class="lang-btn">EN</button>
         </div>
+
         <div class="avatar-wrap">
-          <img src="photo.jpg" alt="Mo Li" class="avatar" onerror="this.src='https://via.placeholder.com/220x220.png?text=Photo';" />
+          <img
+            src="photo.jpg"
+            alt="Mo Li"
+            class="avatar"
+            onerror="this.src='https://via.placeholder.com/220x220.png?text=Photo';"
+          />
         </div>
+
         <h1 class="name" data-zh="李默" data-en="Mo Li">李默</h1>
-        <p class="title" data-zh="辽宁大学信息学部 教师" data-en="Faculty Member, Liaoning University">辽宁大学信息学部 教师</p>
-        <p class="affiliation">Liaoning University, China</p>
+        <p class="title" data-zh="博士" data-en="Lecturer">博士</p>
+        <p
+          class="affiliation"
+          data-zh="辽宁大学信息学部"
+          data-en="Data Science and Big Data Program, School of Information, Liaoning University"
+        >
+          辽宁大学信息学部
+        </p>
+
+        <div class="info-list">
+          <p>
+            <strong data-zh="邮箱：" data-en="Email:">邮箱：</strong>
+            <a href="mailto:limo@lnu.edu.cn">limo@lnu.edu.cn</a>
+          </p>
+          <p>
+            <strong data-zh="单位：" data-en="Affiliation:">单位：</strong>
+            <span
+              data-zh="辽宁大学信息学部"
+              data-en="School of Information, Liaoning University"
+            >
+              辽宁大学信息学部
+            </span>
+          </p>
+          <p>
+            <strong data-zh="研究方向：" data-en="Research Areas:">研究方向：</strong>
+            <span
+              data-zh="图数据挖掘、知识图谱、时间序列数据分析"
+              data-en="Graph Data Mining, Knowledge Graphs, and Time Series Data Analytics"
+            >
+              图数据挖掘、知识图谱、时间序列数据分析
+            </span>
+          </p>
+        </div>
+
+        <div class="social-links">
+          <a
+            href="https://scholar.google.com.hk/citations?user=UEooAxEAAAAJ&hl=zh-CN"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Google Scholar
+          </a>
+          <a
+            href="https://dblp.org/pid/87/4982-4.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            DBLP
+          </a>
+          <a
+            href="https://github.com/moli-lnu"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+        </div>
       </div>
     </aside>
 
@@ -35,37 +98,262 @@
       </header>
 
       <section class="section">
-        <h2 data-zh="科研项目" data-en="Research Projects">科研项目</h2>
-        <ul class="plain-list">
-          <li data-zh="国家自然科学基金青年项目：面向复杂场景的图异常检测研究" data-en="NSFC Young Scientists Fund: Research on Graph Anomaly Detection in Complex Scenarios">
-            国家自然科学基金青年项目：面向复杂场景的图异常检测研究
-          </li>
-          <li data-zh="省部级科研项目：多源时序图数据智能分析关键技术研究" data-en="Provincial/Ministerial Project: Intelligent Analysis of Multi-Source Temporal Graph Data">
-            省部级科研项目：多源时序图数据智能分析关键技术研究
-          </li>
-          <li data-zh="横向合作项目：图学习方法在行业场景中的应用研究" data-en="Industry Collaboration: Applications of Graph Learning in Real-World Scenarios">
-            横向合作项目：图学习方法在行业场景中的应用研究
-          </li>
-        </ul>
+        <h2 data-zh="主持项目" data-en="Principal Investigator Projects">主持项目</h2>
+        <div class="pub-item">
+          <p
+            class="pub-title"
+            data-zh="基于时序图神经网络的异常检测方法研究"
+            data-en="Research on Anomaly Detection Methods Based on Temporal Graph Neural Networks"
+          >
+            基于时序图神经网络的异常检测方法研究
+          </p>
+          <p
+            class="pub-authors"
+            data-zh="辽宁省自然科学基金面上项目，项目编号：2025-MSLH-300"
+            data-en="Liaoning Provincial Natural Science Foundation General Program, Grant No. 2025-MSLH-300"
+          >
+            辽宁省自然科学基金面上项目，项目编号：2025-MSLH-300
+          </p>
+          <p
+            class="pub-venue"
+            data-zh="2025.11 – 2027.10，8万元，在研，主持"
+            data-en="Nov. 2025 – Oct. 2027, CNY 80,000, Ongoing, Principal Investigator"
+          >
+            2025.11 – 2027.10，8万元，在研，主持
+          </p>
+        </div>
+
+        <div class="pub-item">
+          <p
+            class="pub-title"
+            data-zh="时序二部图中社区查询处理关键技术研究"
+            data-en="Key Technologies for Community Search in Temporal Bipartite Graphs"
+          >
+            时序二部图中社区查询处理关键技术研究
+          </p>
+          <p
+            class="pub-authors"
+            data-zh="辽宁省教育厅青年项目，项目编号：JYTQN2023189"
+            data-en="Youth Project of Liaoning Provincial Department of Education, Grant No. JYTQN2023189"
+          >
+            辽宁省教育厅青年项目，项目编号：JYTQN2023189
+          </p>
+          <p
+            class="pub-venue"
+            data-zh="2023.12 – 2025.11，3万元，结题，主持"
+            data-en="Dec. 2023 – Nov. 2025, CNY 30,000, Completed, Principal Investigator"
+          >
+            2023.12 – 2025.11，3万元，结题，主持
+          </p>
+        </div>
+
+        <div class="pub-item">
+          <p
+            class="pub-title"
+            data-zh="基于时序二部图的个性化位置推荐系统关键技术研究"
+            data-en="Key Technologies for Personalized POI Recommendation Based on Temporal Bipartite Graphs"
+          >
+            基于时序二部图的个性化位置推荐系统关键技术研究
+          </p>
+          <p
+            class="pub-authors"
+            data-zh="中国高校产学研创新基金—新一代信息技术创新项目，项目编号：2023IT047"
+            data-en="China University Industry-University-Research Innovation Fund – New-Generation Information Technology Innovation Project, Grant No. 2023IT047"
+          >
+            中国高校产学研创新基金—新一代信息技术创新项目，项目编号：2023IT047
+          </p>
+          <p
+            class="pub-venue"
+            data-zh="2024.09 – 2025.09，5万元，结题，主持"
+            data-en="Sep. 2024 – Sep. 2025, CNY 50,000, Completed, Principal Investigator"
+          >
+            2024.09 – 2025.09，5万元，结题，主持
+          </p>
+        </div>
+
+        <div class="pub-item">
+          <p
+            class="pub-title"
+            data-zh="面向时序二分图的相似查询处理关键技术研究"
+            data-en="Key Technologies for Similarity Query Processing over Temporal Bipartite Graphs"
+          >
+            面向时序二分图的相似查询处理关键技术研究
+          </p>
+          <p
+            class="pub-authors"
+            data-zh="辽宁省博士科研启动基金计划项目，项目编号：2022-BS-111"
+            data-en="Liaoning Provincial Doctoral Research Start-up Fund Project, Grant No. 2022-BS-111"
+          >
+            辽宁省博士科研启动基金计划项目，项目编号：2022-BS-111
+          </p>
+          <p
+            class="pub-venue"
+            data-zh="2022.09 – 2024.08，3万元，结题，主持"
+            data-en="Sep. 2022 – Aug. 2024, CNY 30,000, Completed, Principal Investigator"
+          >
+            2022.09 – 2024.08，3万元，结题，主持
+          </p>
+        </div>
       </section>
 
       <section class="section">
-        <h2 data-zh="学术兼职" data-en="Academic Services">学术兼职</h2>
-        <ul class="plain-list">
-          <li data-zh="国际期刊与会议审稿人：AAAI, SIGIR, DASFAA 等" data-en="Reviewer for international conferences and journals: AAAI, SIGIR, DASFAA, etc.">
-            国际期刊与会议审稿人：AAAI, SIGIR, DASFAA 等
-          </li>
-          <li data-zh="参与 CCF / YOCSEF 等学术共同体活动" data-en="Active in academic communities such as CCF and YOCSEF">
-            参与 CCF / YOCSEF 等学术共同体活动
-          </li>
-          <li data-zh="承担学术会议组织与学术服务工作" data-en="Providing conference organization and academic services">
-            承担学术会议组织与学术服务工作
-          </li>
-        </ul>
+        <h2 data-zh="参与项目" data-en="Participating Projects">参与项目</h2>
+        <div class="pub-item">
+          <p
+            class="pub-title"
+            data-zh="煤岩体变形局部化理论与多源时序数据协同驱动的冲击地压智能预警"
+            data-en="Intelligent Early Warning of Rock Burst Driven by Deformation Localization Theory and Multi-source Temporal Data"
+          >
+            煤岩体变形局部化理论与多源时序数据协同驱动的冲击地压智能预警
+          </p>
+          <p
+            class="pub-authors"
+            data-zh="国家自然科学基金面上项目"
+            data-en="NSFC General Program"
+          >
+            国家自然科学基金面上项目
+          </p>
+          <p
+            class="pub-venue"
+            data-zh="2026.01 – 2029.12，在研，参与"
+            data-en="Jan. 2026 – Dec. 2029, Ongoing, Participant"
+          >
+            2026.01 – 2029.12，在研，参与
+          </p>
+        </div>
+
+        <div class="pub-item">
+          <p
+            class="pub-title"
+            data-zh="面向多源时序异质网络的主从群体识别与信息传播控制机理研究"
+            data-en="Leader-Follower Group Identification and Information Diffusion Control in Multi-source Temporal Heterogeneous Networks"
+          >
+            面向多源时序异质网络的主从群体识别与信息传播控制机理研究
+          </p>
+          <p
+            class="pub-authors"
+            data-zh="国家自然科学基金面上项目"
+            data-en="NSFC General Program"
+          >
+            国家自然科学基金面上项目
+          </p>
+          <p
+            class="pub-venue"
+            data-zh="2025.01 – 2028.12，在研，参与"
+            data-en="Jan. 2025 – Dec. 2028, Ongoing, Participant"
+          >
+            2025.01 – 2028.12，在研，参与
+          </p>
+        </div>
+
+        <div class="pub-item">
+          <p
+            class="pub-title"
+            data-zh="煤矿地下水库动力灾害防治技术与装备研究"
+            data-en="Technology and Equipment for Dynamic Disaster Prevention in Underground Coal Mine Reservoirs"
+          >
+            煤矿地下水库动力灾害防治技术与装备研究
+          </p>
+          <p
+            class="pub-authors"
+            data-zh="国家科技重大专项课题"
+            data-en="National Major Science and Technology Special Project"
+          >
+            国家科技重大专项课题
+          </p>
+          <p
+            class="pub-venue"
+            data-zh="2025.07 – 2030.12，在研，参与"
+            data-en="Jul. 2025 – Dec. 2030, Ongoing, Participant"
+          >
+            2025.07 – 2030.12，在研，参与
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 data-zh="科研教学获奖" data-en="Research and Teaching Awards">科研教学获奖</h2>
+
+        <div class="pub-item">
+          <p
+            class="pub-title"
+            data-zh="大数据智能管理与耕地利用分区优化关键技术"
+            data-en="Key Technologies of Big Data Intelligent Management and Cultivated Land Utilization Zoning Optimization"
+          >
+            大数据智能管理与耕地利用分区优化关键技术
+          </p>
+          <p
+            class="pub-authors"
+            data-zh="辽宁省自然资源厅科技进步奖，省部二等奖"
+            data-en="Science and Technology Progress Award of the Department of Natural Resources of Liaoning Province, Second Prize"
+          >
+            辽宁省自然资源厅科技进步奖，省部二等奖
+          </p>
+          <p
+            class="pub-venue"
+            data-zh="2025，排名第2/10（R2）"
+            data-en="2025, Ranked 2/10 (R2)"
+          >
+            2025，排名第2/10（R2）
+          </p>
+        </div>
+
+        <div class="pub-item">
+          <p
+            class="pub-title"
+            data-zh="煤矿冲击地压多源时序监测大数据智能管理关键技术及应用"
+            data-en="Key Technologies and Applications of Intelligent Management of Multi-source Temporal Monitoring Big Data for Coal Mine Rock Burst"
+          >
+            煤矿冲击地压多源时序监测大数据智能管理关键技术及应用
+          </p>
+          <p
+            class="pub-authors"
+            data-zh="中关村绿色矿山产业联盟科技进步奖，一等奖"
+            data-en="Science and Technology Progress Award of Zhongguancun Green Mine Industry Alliance, First Prize"
+          >
+            中关村绿色矿山产业联盟科技进步奖，一等奖
+          </p>
+          <p
+            class="pub-venue"
+            data-zh="2025，排名第9/14（R9）"
+            data-en="2025, Ranked 9/14 (R9)"
+          >
+            2025，排名第9/14（R9）
+          </p>
+        </div>
+
+        <div class="pub-item">
+          <p
+            class="pub-title"
+            data-zh="《SVM 分类算法教学与可视化课件》"
+            data-en="SVM Classification Algorithm Teaching and Visualization Courseware"
+          >
+            《SVM 分类算法教学与可视化课件》
+          </p>
+          <p
+            class="pub-authors"
+            data-zh="第二十九届辽宁省教育教学信息化交流活动，高等学校组课件，三等奖"
+            data-en="The 29th Liaoning Educational Informatization Exchange Activity, Higher Education Courseware Category, Third Prize"
+          >
+            第二十九届辽宁省教育教学信息化交流活动，高等学校组课件，三等奖
+          </p>
+          <p
+            class="pub-venue"
+            data-zh="2025，排名第1/3（R1）"
+            data-en="2025, Ranked 1/3 (R1)"
+          >
+            2025，排名第1/3（R1）
+          </p>
+        </div>
       </section>
 
       <footer class="footer">
-        <p data-zh="© 2026 李默. All rights reserved." data-en="© 2026 Mo Li. All rights reserved.">© 2026 李默. All rights reserved.</p>
+        <p
+          data-zh="© 2026 李默. All rights reserved."
+          data-en="© 2026 Mo Li. All rights reserved."
+        >
+          © 2026 李默. All rights reserved.
+        </p>
       </footer>
     </main>
   </div>
