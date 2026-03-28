@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>李默 | 指导学生</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <div class="profile-card">
+        <div class="lang-switch">
+          <button id="btn-zh" class="lang-btn active">中文</button>
+          <button id="btn-en" class="lang-btn">EN</button>
+        </div>
+        <div class="avatar-wrap">
+          <img src="photo.jpg" alt="Mo Li" class="avatar" onerror="this.src='https://via.placeholder.com/220x220.png?text=Photo';" />
+        </div>
+        <h1 class="name" data-zh="李默" data-en="Mo Li">李默</h1>
+        <p class="title" data-zh="辽宁大学信息学部 教师" data-en="Faculty Member, Liaoning University">辽宁大学信息学部 教师</p>
+        <p class="affiliation">Liaoning University, China</p>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <nav class="nav">
+          <a href="index.html" data-zh="首页" data-en="Home">首页</a>
+          <a href="research.html" data-zh="研究方向" data-en="Research">研究方向</a>
+          <a href="projects.html" data-zh="科研项目" data-en="Projects">科研项目</a>
+          <a href="publications.html" data-zh="学术论文" data-en="Publications">学术论文</a>
+          <a href="students.html" class="active" data-zh="指导学生" data-en="Students">指导学生</a>
+        </nav>
+      </header>
+
+      <section class="section">
+        <h2 data-zh="博士研究生" data-en="PhD Students">博士研究生</h2>
+        <ul class="plain-list">
+          <li>Student A</li>
+          <li>Student B</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2 data-zh="硕士研究生" data-en="Master Students">硕士研究生</h2>
+        <ul class="plain-list">
+          <li>Student C</li>
+          <li>Student D</li>
+          <li>Student E</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2 data-zh="已毕业学生" data-en="Alumni">已毕业学生</h2>
+        <ul class="plain-list">
+          <li data-zh="Student F（现工作于某高校/企业）" data-en="Student F (now at a university/company)">Student F（现工作于某高校/企业）</li>
+          <li data-zh="Student G（现攻读博士学位）" data-en="Student G (currently pursuing a PhD degree)">Student G（现攻读博士学位）</li>
+        </ul>
+      </section>
+
+      <footer class="footer">
+        <p data-zh="© 2026 李默. All rights reserved." data-en="© 2026 Mo Li. All rights reserved.">© 2026 李默. All rights reserved.</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
