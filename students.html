@@ -7,19 +7,50 @@
   <meta name="description" content="李默指导学生" />
   <link rel="stylesheet" href="style.css"/>
   <style>
-    .students-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    .students-group-title {
+      margin-top: 20px;
+      margin-bottom: 12px;
+      color: var(--accent);
+      font-size: 1.08rem;
+      font-weight: 700;
+    }
+
+    .students-row {
+      display: flex;
       gap: 20px;
-      margin-top: 16px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+      margin-bottom: 28px;
+      scroll-behavior: smooth;
+    }
+
+    .students-row::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .students-row::-webkit-scrollbar-thumb {
+      background: #cfd8e3;
+      border-radius: 999px;
+    }
+
+    .students-row::-webkit-scrollbar-track {
+      background: #eef3f8;
+      border-radius: 999px;
     }
 
     .student-card {
+      flex: 0 0 260px;
       border: 1px solid var(--line);
       border-radius: 16px;
       background: #fcfdff;
       padding: 18px;
       box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+      transition: all 0.2s ease;
+    }
+
+    .student-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
     }
 
     .student-photo-wrap {
@@ -30,6 +61,7 @@
     .student-photo {
       width: 130px;
       height: 130px;
+      aspect-ratio: 1 / 1;
       object-fit: cover;
       border-radius: 50%;
       border: 4px solid var(--accent-light);
@@ -48,6 +80,7 @@
       margin: 6px 0;
       color: var(--muted);
       font-size: 0.96rem;
+      text-align: center;
     }
 
     .student-tags {
@@ -55,6 +88,7 @@
       flex-wrap: wrap;
       gap: 8px;
       margin-top: 10px;
+      justify-content: center;
     }
 
     .student-tag {
@@ -75,6 +109,7 @@
       border-radius: 12px;
       font-size: 0.93rem;
       color: #8a5a00;
+      line-height: 1.6;
     }
 
     .student-destination {
@@ -85,6 +120,7 @@
       border-radius: 12px;
       font-size: 0.93rem;
       color: #244b7a;
+      line-height: 1.6;
     }
   </style>
 </head>
@@ -109,7 +145,7 @@
       </div>
 
       <h1 class="name" data-zh="李默" data-en="Mo Li">李默</h1>
-      <p class="title" data-zh="硕士生导师" data-en="Lecturer">硕士生导师</p>
+      <p class="title" data-zh="硕士生导师" data-en="Master Supervisor">硕士生导师</p>
       <p
         class="affiliation"
         data-zh="辽宁大学信息学部"
@@ -147,14 +183,15 @@
     <section class="section">
       <h2 data-zh="在读学生" data-en="Current Students">在读学生</h2>
 
-      <div class="students-grid">
+      <h3 class="students-group-title" data-zh="2025级" data-en="Cohort 2025">2025级</h3>
+      <div class="students-row">
         <div class="student-card">
           <div class="student-photo-wrap">
             <img src="StuPhoto/Hanyiming.jpg" alt="Han Yiming" class="student-photo"
                  onerror="this.src='https://via.placeholder.com/130x130.png?text=Photo';" />
           </div>
           <p class="student-name" data-zh="韩一鸣" data-en="Han Yiming">韩一鸣</p>
-          <p class="student-meta" data-zh="2025级 博士生" data-en="Ph.D. Student, 2025 Cohort">2025级 博士生</p>
+          <p class="student-meta" data-zh="博士生" data-en="Ph.D. Student">博士生</p>
           <div class="student-tags">
             <span class="student-tag" data-zh="异常检测" data-en="Anomaly Detection">异常检测</span>
           </div>
@@ -162,11 +199,72 @@
 
         <div class="student-card">
           <div class="student-photo-wrap">
+            <img src="StuPhoto/Baotianhui.jpg" alt="Bao Tianhui" class="student-photo"
+                 onerror="this.src='https://via.placeholder.com/130x130.png?text=Photo';" />
+          </div>
+          <p class="student-name" data-zh="宝天慧" data-en="Bao Tianhui">宝天慧</p>
+          <p class="student-meta" data-zh="硕士生" data-en="Master Student">硕士生</p>
+          <div class="student-tags">
+            <span class="student-tag" data-zh="社区查询" data-en="Community Search">社区查询</span>
+            <span class="student-tag" data-zh="异常检测" data-en="Anomaly Detection">异常检测</span>
+          </div>
+        </div>
+
+        <div class="student-card">
+          <div class="student-photo-wrap">
+            <img src="StuPhoto/Zhuyuanxiang.jpg" alt="Zhu Yuanxiang" class="student-photo"
+                 onerror="this.src='https://via.placeholder.com/130x130.png?text=Photo';" />
+          </div>
+          <p class="student-name" data-zh="朱元翔" data-en="Zhu Yuanxiang">朱元翔</p>
+          <p class="student-meta" data-zh="硕士生" data-en="Master Student">硕士生</p>
+          <div class="student-tags">
+            <span class="student-tag" data-zh="时间序列数据分析" data-en="Time Series Data Analytics">时间序列数据分析</span>
+            <span class="student-tag" data-zh="异常检测" data-en="Anomaly Detection">异常检测</span>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="students-group-title" data-zh="2024级" data-en="Cohort 2024">2024级</h3>
+      <div class="students-row">
+        <div class="student-card">
+          <div class="student-photo-wrap">
+            <img src="StuPhoto/Huyuhang.jpg" alt="Hu Yuhang" class="student-photo"
+                 onerror="this.src='https://via.placeholder.com/130x130.png?text=Photo';" />
+          </div>
+          <p class="student-name" data-zh="胡宇航" data-en="Hu Yuhang">胡宇航</p>
+          <p class="student-meta" data-zh="硕士生" data-en="Master Student">硕士生</p>
+          <div class="student-tags">
+            <span class="student-tag" data-zh="时间序列数据分析" data-en="Time Series Data Analytics">时间序列数据分析</span>
+          </div>
+          <div class="student-award"
+               data-zh="获奖：比亚迪奖学金"
+               data-en="Award: BYD Scholarship">
+            获奖：比亚迪奖学金
+          </div>
+        </div>
+
+        <div class="student-card">
+          <div class="student-photo-wrap">
+            <img src="StuPhoto/Caoyingqi.jpg" alt="Cao Yingqi" class="student-photo"
+                 onerror="this.src='https://via.placeholder.com/130x130.png?text=Photo';" />
+          </div>
+          <p class="student-name" data-zh="曹瑛琪" data-en="Cao Yingqi">曹瑛琪</p>
+          <p class="student-meta" data-zh="硕士生" data-en="Master Student">硕士生</p>
+          <div class="student-tags">
+            <span class="student-tag" data-zh="知识图谱" data-en="Knowledge Graphs">知识图谱</span>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="students-group-title" data-zh="2023级" data-en="Cohort 2023">2023级</h3>
+      <div class="students-row">
+        <div class="student-card">
+          <div class="student-photo-wrap">
             <img src="StuPhoto/Zhaozhaosong.jpg" alt="Zhao Zhaosong" class="student-photo"
                  onerror="this.src='https://via.placeholder.com/130x130.png?text=Photo';" />
           </div>
           <p class="student-name" data-zh="赵钊凇" data-en="Zhao Zhaosong">赵钊凇</p>
-          <p class="student-meta" data-zh="2023级 硕士生" data-en="Master Student, 2023 Cohort">2023级 硕士生</p>
+          <p class="student-meta" data-zh="硕士生" data-en="Master Student">硕士生</p>
           <div class="student-tags">
             <span class="student-tag" data-zh="社区查询" data-en="Community Search">社区查询</span>
           </div>
@@ -183,64 +281,9 @@
                  onerror="this.src='https://via.placeholder.com/130x130.png?text=Photo';" />
           </div>
           <p class="student-name" data-zh="司梦君垚" data-en="Si Mengjunyao">司梦君垚</p>
-          <p class="student-meta" data-zh="2023级 硕士生" data-en="Master Student, 2023 Cohort">2023级 硕士生</p>
+          <p class="student-meta" data-zh="硕士生" data-en="Master Student">硕士生</p>
           <div class="student-tags">
             <span class="student-tag" data-zh="知识图谱" data-en="Knowledge Graphs">知识图谱</span>
-          </div>
-        </div>
-
-        <div class="student-card">
-          <div class="student-photo-wrap">
-            <img src="StuPhoto/Huyuhang.jpg" alt="Hu Yuhang" class="student-photo"
-                 onerror="this.src='https://via.placeholder.com/130x130.png?text=Photo';" />
-          </div>
-          <p class="student-name" data-zh="胡宇航" data-en="Hu Yuhang">胡宇航</p>
-          <p class="student-meta" data-zh="2024级 硕士生" data-en="Master Student, 2024 Cohort">2024级 硕士生</p>
-          <div class="student-tags">
-            <span class="student-tag" data-zh="时间序列数据分析" data-en="Time Series Data Analytics">时间序列数据分析</span>
-          </div>
-          <div class="student-award"
-               data-zh="获奖：比亚迪奖学金"
-               data-en="Awards: BYD Scholarship">
-            获奖：比亚迪奖学金
-          </div>
-        </div>
-
-        <div class="student-card">
-          <div class="student-photo-wrap">
-            <img src="StuPhoto/Caoyingqi.jpg" alt="Cao Yingqi" class="student-photo"
-                 onerror="this.src='https://via.placeholder.com/130x130.png?text=Photo';" />
-          </div>
-          <p class="student-name" data-zh="曹瑛琪" data-en="Cao Yingqi">曹瑛琪</p>
-          <p class="student-meta" data-zh="2024级 硕士生" data-en="Master Student, 2024 Cohort">2024级 硕士生</p>
-          <div class="student-tags">
-            <span class="student-tag" data-zh="知识图谱" data-en="Knowledge Graphs">知识图谱</span>
-          </div>
-        </div>
-
-        <div class="student-card">
-          <div class="student-photo-wrap">
-            <img src="StuPhoto/Baotianhui.jpg" alt="Bao Tianhui" class="student-photo"
-                 onerror="this.src='https://via.placeholder.com/130x130.png?text=Photo';" />
-          </div>
-          <p class="student-name" data-zh="宝天慧" data-en="Bao Tianhui">宝天慧</p>
-          <p class="student-meta" data-zh="2025级 硕士生" data-en="Master Student, 2025 Cohort">2025级 硕士生</p>
-          <div class="student-tags">
-            <span class="student-tag" data-zh="社区查询" data-en="Community Search">社区查询</span>
-            <span class="student-tag" data-zh="异常检测" data-en="Anomaly Detection">异常检测</span>
-          </div>
-        </div>
-
-        <div class="student-card">
-          <div class="student-photo-wrap">
-            <img src="StuPhoto/Zhuyuanxiang.jpg" alt="Zhu Yuanxiang" class="student-photo"
-                 onerror="this.src='https://via.placeholder.com/130x130.png?text=Photo';" />
-          </div>
-          <p class="student-name" data-zh="朱元翔" data-en="Zhu Yuanxiang">朱元翔</p>
-          <p class="student-meta" data-zh="2025级 硕士生" data-en="Master Student, 2025 Cohort">2025级 硕士生</p>
-          <div class="student-tags">
-            <span class="student-tag" data-zh="时间序列数据分析" data-en="Time Series Data Analytics">时间序列数据分析</span>
-            <span class="student-tag" data-zh="异常检测" data-en="Anomaly Detection">异常检测</span>
           </div>
         </div>
       </div>
@@ -249,36 +292,15 @@
     <section class="section">
       <h2 data-zh="毕业生" data-en="Alumni">毕业生</h2>
 
-      <div class="students-grid">
-        <div class="student-card">
-          <div class="student-photo-wrap">
-            <img src="StuPhoto/Xiezhiran.jpg" alt="Xie Zhiran" class="student-photo"
-                 onerror="this.src='https://via.placeholder.com/130x130.png?text=Photo';" />
-          </div>
-          <p class="student-name" data-zh="谢志然" data-en="Xie Zhiran">谢志然</p>
-          <p class="student-meta" data-zh="2021级 硕士生" data-en="Master Student, 2021 Cohort">2021级 硕士生</p>
-          <div class="student-tags">
-            <span class="student-tag" data-zh="社区查询" data-en="Community Search">社区查询</span>
-          </div>
-          <div class="student-award"
-               data-zh="获奖：辽宁大学优秀硕士毕业论文"
-               data-en="Award: Outstanding Master's Thesis of Liaoning University">
-            获奖：辽宁大学优秀硕士毕业论文
-          </div>
-          <div class="student-destination"
-               data-zh="毕业去向：浪潮"
-               data-en="Destination: Inspur">
-            毕业去向：浪潮
-          </div>
-        </div>
-
+      <h3 class="students-group-title" data-zh="2022级" data-en="Cohort 2022">2022级</h3>
+      <div class="students-row">
         <div class="student-card">
           <div class="student-photo-wrap">
             <img src="StuPhoto/Guyinghao.jpg" alt="Gu Yinghao" class="student-photo"
                  onerror="this.src='https://via.placeholder.com/130x130.png?text=Photo';" />
           </div>
           <p class="student-name" data-zh="顾英豪" data-en="Gu Yinghao">顾英豪</p>
-          <p class="student-meta" data-zh="2022级 硕士生" data-en="Master Student, 2022 Cohort">2022级 硕士生</p>
+          <p class="student-meta" data-zh="硕士生" data-en="Master Student">硕士生</p>
           <div class="student-tags">
             <span class="student-tag" data-zh="知识图谱" data-en="Knowledge Graphs">知识图谱</span>
           </div>
@@ -300,7 +322,7 @@
                  onerror="this.src='https://via.placeholder.com/130x130.png?text=Photo';" />
           </div>
           <p class="student-name" data-zh="韩一鸣" data-en="Han Yiming">韩一鸣</p>
-          <p class="student-meta" data-zh="2022级 硕士生" data-en="Master Student, 2022 Cohort">2022级 硕士生</p>
+          <p class="student-meta" data-zh="硕士生" data-en="Master Student">硕士生</p>
           <div class="student-tags">
             <span class="student-tag" data-zh="二部图Embedding" data-en="Bipartite Graph Embedding">二部图Embedding</span>
           </div>
@@ -313,6 +335,31 @@
                data-zh="毕业去向：辽宁大学读博"
                data-en="Destination: Ph.D. at Liaoning University">
             毕业去向：辽宁大学读博
+          </div>
+        </div>
+      </div>
+
+      <h3 class="students-group-title" data-zh="2021级" data-en="Cohort 2021">2021级</h3>
+      <div class="students-row">
+        <div class="student-card">
+          <div class="student-photo-wrap">
+            <img src="StuPhoto/Xiezhiran.jpg" alt="Xie Zhiran" class="student-photo"
+                 onerror="this.src='https://via.placeholder.com/130x130.png?text=Photo';" />
+          </div>
+          <p class="student-name" data-zh="谢志然" data-en="Xie Zhiran">谢志然</p>
+          <p class="student-meta" data-zh="硕士生" data-en="Master Student">硕士生</p>
+          <div class="student-tags">
+            <span class="student-tag" data-zh="社区查询" data-en="Community Search">社区查询</span>
+          </div>
+          <div class="student-award"
+               data-zh="获奖：辽宁大学优秀硕士毕业论文"
+               data-en="Award: Outstanding Master's Thesis of Liaoning University">
+            获奖：辽宁大学优秀硕士毕业论文
+          </div>
+          <div class="student-destination"
+               data-zh="毕业去向：浪潮"
+               data-en="Destination: Inspur">
+            毕业去向：浪潮
           </div>
         </div>
       </div>
