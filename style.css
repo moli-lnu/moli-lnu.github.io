@@ -302,4 +302,45 @@ a:hover {
   .nav {
     gap: 12px;
   }
+
+  .year-block {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fcfdff;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.year-block summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 14px 18px;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-light);
+  user-select: none;
+}
+
+.year-block summary::-webkit-details-marker {
+  display: none;
+}
+
+.year-block summary::after {
+  content: "＋";
+  float: right;
+  font-weight: 700;
+}
+
+.year-block[open] summary::after {
+  content: "－";
+}
+
+.year-block .pub-item {
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.year-block .pub-item:first-of-type {
+  padding-top: 16px;
+}
 }
