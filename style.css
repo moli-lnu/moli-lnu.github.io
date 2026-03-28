@@ -1,0 +1,301 @@
+:root {
+  --bg: #f6f8fb;
+  --panel: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --accent: #245b96;
+  --accent-light: #edf4fb;
+  --shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  --radius: 18px;
+  --max-width: 1320px;
+  --sidebar-width: 320px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  gap: 32px;
+  padding: 32px 20px 48px;
+}
+
+.sidebar {
+  position: sticky;
+  top: 24px;
+  align-self: start;
+}
+
+.profile-card {
+  background: var(--panel);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px 24px;
+  border: 1px solid var(--line);
+}
+
+.lang-switch {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.lang-btn {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--text);
+  padding: 6px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.lang-btn.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.avatar-wrap {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid var(--accent-light);
+}
+
+.name {
+  margin: 8px 0 4px;
+  font-size: 2rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.title,
+.affiliation {
+  margin: 4px 0;
+  text-align: center;
+  color: var(--muted);
+}
+
+.info-list {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  font-size: 0.96rem;
+}
+
+.info-list p {
+  margin: 8px 0;
+}
+
+.social-links {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.social-links a {
+  display: inline-block;
+  padding: 8px 12px;
+  background: var(--accent-light);
+  border-radius: 999px;
+  font-size: 0.92rem;
+}
+
+.main-content {
+  min-width: 0;
+}
+
+.topbar {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px 20px;
+  position: sticky;
+  top: 16px;
+  z-index: 10;
+  margin-bottom: 24px;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.nav a {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.section {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px 28px;
+  margin-bottom: 24px;
+}
+
+.section h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 1.7rem;
+  color: var(--accent);
+}
+
+.section h3 {
+  margin-top: 24px;
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px;
+  background: #fcfdff;
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.08rem;
+}
+
+.timeline,
+.plain-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.timeline li,
+.plain-list li {
+  margin-bottom: 10px;
+}
+
+.date {
+  display: inline-block;
+  min-width: 75px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.pub-item {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.pub-item:last-of-type {
+  border-bottom: none;
+}
+
+.pub-title {
+  margin: 0 0 6px;
+  font-weight: 700;
+  font-size: 1.06rem;
+}
+
+.pub-authors,
+.pub-venue,
+.pub-links {
+  margin: 4px 0;
+  color: var(--muted);
+}
+
+.pub-links a {
+  margin-right: 14px;
+}
+
+.footer {
+  text-align: center;
+  color: var(--muted);
+  padding: 18px 0 8px;
+}
+
+@media (max-width: 1000px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+  }
+
+  .avatar {
+    width: 170px;
+    height: 170px;
+  }
+}
+
+@media (max-width: 680px) {
+  .page {
+    padding: 16px 12px 32px;
+    gap: 18px;
+  }
+
+  .profile-card,
+  .topbar,
+  .section {
+    padding: 20px 16px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .name {
+    font-size: 1.7rem;
+  }
+
+  .section h2 {
+    font-size: 1.4rem;
+  }
+
+  .nav {
+    gap: 12px;
+  }
+}
